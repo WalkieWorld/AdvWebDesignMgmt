@@ -3,6 +3,7 @@ header aside .breadcrumb {
 	top: 50px;
 	width: 100%;
 	padding: 8px 15px 5px 150px;
+	z-index: 1;
 }
 
 footer{
@@ -21,4 +22,49 @@ footer aside{
 footer p{
 	float: left;
 	margin: 0px 20px 0px 0px;
+}
+
+.main-content{
+	top: 100px;
+	position: relative;
+}
+
+.main-content article aside ul{
+	list-style: none;
+}
+
+.main-content article aside ul li{
+	display: inline;
+	position: relative;
+	float: left;
+	margin: 0px 20px 0px 0px;
+}
+
+.main-content article footer{
+	position: relative;
+	border: none;
+}
+
+.padding-top5{
+	padding-top: 5px !important;
+}
+
+.padding-top10{
+	padding-top: 10px !important;
+}
+
+.padding-left5{
+	padding-left: 5px !important;
+}
+
+.padding-left10{
+	padding-left: 10px !important;
+}
+
+.margin-top10{
+	margin-top: 10px !important;
+}
+
+.margin-top5{
+	margin-top: 5px !important;
 }
