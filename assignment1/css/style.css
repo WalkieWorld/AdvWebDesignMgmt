@@ -29,6 +29,14 @@ footer p{
 	position: relative;
 }
 
+.main-content article{
+	margin: 0px 0px 50px 0px;
+}
+
+.main-content article aside{
+	height: 40px;
+}
+
 .main-content article aside ul{
 	list-style: none;
 }
@@ -43,6 +51,11 @@ footer p{
 .main-content article footer{
 	position: relative;
 	border: none;
+	margin: 0px 0px 0px 20px;
+}
+
+.main-content article footer p{
+	margin-bottom: 50px;
 }
 
 .padding-top5{
