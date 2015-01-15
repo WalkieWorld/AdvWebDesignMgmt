@@ -1,9 +1,17 @@
-header aside .breadcrumb {
+body{
+	padding-top: 70px;
+}
+header .navbar{
+	font-size: 20px;
+	width: 100%;
+}
+
+.breadcrumb-fixed{
 	position: fixed;
 	top: 50px;
-	width: 100%;
-	padding: 8px 15px 5px 150px;
 	z-index: 1;
+	right: 0px;
+	left: 0px;
 }
 
 footer{
@@ -25,7 +33,6 @@ footer p{
 }
 
 .main-content{
-	top: 100px;
 	position: relative;
 }
 
