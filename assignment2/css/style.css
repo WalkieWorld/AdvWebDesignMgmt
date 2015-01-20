@@ -1,5 +1,11 @@
-.container{
+body.container{
+	font-family: 'GlyphIcons', Verdana, Arial, Helvetica, sans-serif;
+	margin-top: 100px;
 
+}
+.container{
+	margin: 0px auto;
+	width: 1140px;
 }
 
 .container p{
@@ -76,4 +82,70 @@
 }
 .container h4 small {
 	font-size: 0.92em;
+}
+.container a,
+.container .link {
+	color: #2e92cf;
+}
+.container a:hover,
+.container .link:hover {
+	color: #0f5f87;
+}
+.container a:focus,
+.container .link:focus,
+.container a:active,
+.container .link:active {
+	color: #0f5f87;
+}
+.container .btn:hover {
+	color: #0f5f87;
+	background-color: #FFF8DC;
+}
+.container .big-header{
+	background-color: #E3E3E3;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 20px 0px 0px 0px;
+	width: 100%;
+}
+.container .big-header .header{
+	display: flex;
+	margin: 0px auto;
+}
+.container .big-header .header nav{
+	margin: 0px 0px 0px 50px;
+	padding: 18px 0px 0px 0px;
+	right: 0px;
+}
+.container .big-header .breadcrumb{
+	background-color: #cccccc;
+	border-top: solid;
+	border-top-color: #000000;
+	border-top-width: 1px; 
+}
+.btn{
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.4;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+.container .big-header .header nav button {
+	margin-left: -20px;
+	border-left-color: #cccccc;
+	border-right-color: #cccccc;
+}
+.active{
+	background-color: #555555;
+	color: #ffffff;
+}
+.container label {
+	margin: 5px 0;
 }
