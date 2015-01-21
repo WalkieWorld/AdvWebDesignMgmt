@@ -7,29 +7,29 @@
 	<title>Resume</title>
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 </head>
-<body>
-	<header>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<section class="container">
-				<ul class="nav navbar-nav ">
-					<li><a href="index.html">Home</a></li>
-					<li class="active"><a href="resume.html">Resume</a></li>
-					<li><a href="blog.html">Blog</a></li>
-				</ul>
+<body class="container">
+	<section class="wrap">
+		<header class="big-header container">
+			<section class="header">
+				<h4>Hao's World</h4>
+				<nav>
+					<button id="homeBtn" class="btn">Home</button>
+					<button id="resBtn" class="active btn">Resume</button>
+					<button id="blogBtn" class="btn">Blog</button>
+				</nav>
 			</section>
-		</nav>
-		<section class="container breadcrumb-fixed">
-			<ol class="breadcrumb">
-				<li><a href="index.html">Home</a></li>
-				<li class="active">
-					Resume
-				</li>
-			</ol>
-		</section>
-	</header>
+			<aside class="split-line"></aside>
+			<section class="breadcrumb">
+				<nav class="container">
+					<label><a href="index.html" >Home</a></label>
+					<label class="active">Resume</label>
+				</nav>
+			</section>
+		</header>
+	</section>
 	<article class="container main-content margin-top20">
 		<section class="resume-section">
 			<article>
@@ -157,15 +157,15 @@
 			</article>
 		</section>
 	</article>
-
-	<footer>
-		<aside>
+	<footer class="site-footer container">
+		<section class="footer-info">
 			<p>Hao Zhang</p>
+			<span></span>
 			<p>Course: ICT-4510</p>
+			<span></span>
 			<p>Assginment 1</p>
 		</aside>
 	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/my.js"></script>
 </body>
 </html>

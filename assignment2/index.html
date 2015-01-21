@@ -7,30 +7,33 @@
 	<title>index</title>
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 </head>
 <body class="container">
-	<header class="big-header">
-		<section class="header container">
-			<h4>Hao's World</h4>
-			<nav>
-				<button class="active btn">Home</button>
-				<button class="btn">Resume</button>
-				<button class="btn">Blog</button>
-			</nav>
-		</section>
-		<section class="breadcrumb">
-			<nav class="container">
-				<label class="active">Home</label>
-			</nav>
-		</section>
-	</header>
+	<section class="wrap">
+		<header class="big-header container">
+			<section class="header">
+				<h4>Hao's World</h4>
+				<nav>
+					<button id="homeBtn" class="active btn">Home</button>
+					<button id="resBtn" class="btn">Resume</button>
+					<button id="blogBtn" class="btn">Blog</button>
+				</nav>
+			</section>
+			<aside class="split-line"></aside>
+			<section class="breadcrumb">
+				<nav class="container">
+					<label class="active">Home</label>
+				</nav>
+			</section>
+		</header>
+	</section>
 	<article>
-		<form class="">
+		<form>
 			<section class="form-group">
-				<label for="exampleInputEmail1">Career</label>
-				<select>
+				<label>Career</label>
+				<select class="form-posi">
 					<option></option>
 					<option>Accounting</option>
 					<option>Business Developement</option>
@@ -40,17 +43,17 @@
 				</select>
 			</section>
 			<section class="form-group">
-				<label for="exampleInputEmail1">Email address</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+				<label for="inputEmail1">Email address</label>
+				<input type="email" class="form-posi" id="inputEmail1" placeholder="Enter email">
 			</section>
 			<section class="form-group">
-				<label for="exampleInputPassword1">Comment</label>
-				<textarea type="text" class="form-control text-area" id="exampleInputPassword1" placeholder="Password">
+				<label for="inputComment">Comment</label>
+				<textarea type="text" class="form-posi text-area" id="inputComment" placeholder="Comment">
 				</textarea>
 			</section>
 			<section class="form-group">
-				<label for="exampleInputFile">File input</label>
-				<input type="file" id="exampleInputFile">
+				<label for="inputFile">File input</label>
+				<input type="file" id="inputFile" class="form-posi">
 				<p class="help-block">Example block-level help text here.</p>
 			</section>
 			<section class="checkbox">
@@ -58,17 +61,18 @@
 					<input type="checkbox"> Do you want to subscribe to information of this website.
 				</label>
 			</section>
-			<input type="button" class="btn btn-default" value="Submit"/>
+			<button class="btn form-btn">Submit</button>
 		</form>
 	</article>
-	<footer>
-		<aside>
-			<p>Hao Zhang</p>
+	<footer class="site-footer container">
+		<section class="footer-info">
+			<p>Author: Hao Zhang</p>
+			<span></span>
 			<p>Course: ICT-4510</p>
+			<span></span>
 			<p>Assginment 1</p>
-		</aside>
+		</section>
 	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/my.js"></script>
 </body>
 </html>
