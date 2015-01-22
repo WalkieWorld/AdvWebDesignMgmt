@@ -12,6 +12,7 @@ body.container{
 	left: 0px;
 	width: 100%;
 	background-color: #E3E3E3;
+	z-index: 1;
 }
 .container p{
 	font-family: 'Josefin Sans', sans-serif;
@@ -141,7 +142,7 @@ body.container{
 .breadcrumb nav>label+label:before{
 	content: "/\00a0";
 	color: #2e92cf;
-	margin: 0px 10px 0px -15px;
+	margin: 0px 5px 0px -15px;
 }
 .btn{
 	display: inline-block;
@@ -189,15 +190,13 @@ body.container{
 	position: fixed;
 	bottom: 0px;
 	border-top: 1px solid #000000;
-	background-color: #fff
-}
-.container .site-footer .footer-info{
+	background-color: #fff;
 	display: flex;
 }
-.container .site-footer .footer-info p{
+.container .site-footer p{
 	margin: 10px 0px 5px 0px;
 }
-.container .site-footer .footer-info span{
+.container .site-footer span{
 	background-color: #cccccc;
 	width: 1px;
 	margin: 10px 10px 0px 10px;
@@ -230,7 +229,7 @@ form .checkbox{
 }
 .container .article-list .basic-info{
 	display: flex;
-	margin: -10px 0px 20px 0px;
+	margin: -10px 0px 15px 0px;
 }
 .container .article-list .basic-info h4{
 	margin: 0px 20px 0px 0px;
@@ -252,4 +251,35 @@ form .checkbox{
 	color: #000;
 	padding: 5px 0px 0px 0px;
 	margin: 5px 0px -10px 0px;
+}
+.container .resume-section{
+	margin: 0px 0px 40px 0px;
+}
+.container .resume-section .com-info{
+	display: flex;
+	margin: -10px 0px 15px 0px;
+	font-size: 12px;
+	position: relative;
+}
+.container .resume-section .com-info address{
+	margin: 0px 20px 0px 0px;
+	width: 80%;
+}
+.container .resume-section .com-info p{
+	right: 0px;
+	position: absolute;
+}
+.container .resume-section ul{
+	margin: 0px 0px 25px 0px;
+	width: 75%;
+}
+.container .resume-section .degree{
+	margin: -5px 0px 20px 0px;
+}
+.container .resume-section .degree p{
+	margin: -10px 0px 0px 0px;
+	font-size: 0.90em;
+}
+.container .resume-section .award{
+	width: 80%;
 }
