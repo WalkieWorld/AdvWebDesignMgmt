@@ -283,3 +283,6 @@ form .checkbox{
 .container .resume-section .award{
 	width: 80%;
 }
+.container .resume-section h3{
+	border-bottom: 1px solid #c0c0c0;
+}
