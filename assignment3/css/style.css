@@ -1,0 +1,344 @@
+/*
+	Slide smoothly
+*/
+@-webkit-keyframes slideUp{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes slideUp{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes slideUp{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+body.container{
+	font-family: 'Josefin Sans', sans-serif;
+	margin-top: 100px;
+}
+.container{
+	margin: 0px auto;
+	width: 1140px;
+}
+.container .wrap{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: #E3E3E3;
+	z-index: 1;
+}
+.container p{
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 0px 0px 10px;
+	color: #000000;
+	font-size: 1em;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+	word-spacing: 0.1em;
+}
+
+.container strong{
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: bolder;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+	padding: 0;
+	margin: 10px 0;
+	font-weight: 500;
+	color: #000000;
+	letter-spacing: 0.00em;
+}
+
+.container h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2.25em;
+	line-height: 77px;
+}
+.container h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.875em;
+	line-height: 40px;
+	letter-spacing: 0.01em;
+}
+.container h3 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5em;
+	line-height: 36px;
+	letter-spacing: 0.01em;
+}
+.container h4 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.125em;
+	line-height: 26px;
+	letter-spacing: 0.02em;
+}
+.container h5 {
+	font-family: 'Josefin Sans', sans-serif;
+	letter-spacing: 0.02em;
+	font-size: 0.875em;
+	line-height: 23px;
+}
+.container h6 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 0.75em;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+	font-size: 12px;
+}
+.container h1 small {
+	font-size: 1.5em;
+}
+.container h2 small {
+	font-size: 1.2em;
+}
+.container h3 small {
+	font-size: 0.9em;
+}
+.container h4 small {
+	font-size: 0.78em;
+}
+.container h5 small {
+	font-size: 0.6em;
+}
+.container h6 small {
+	font-size: 0.5em;
+}
+.container a,
+.container .link {
+	color: #2e92cf;
+}
+.container a:hover,
+.container .link:hover {
+	color: #0f5f87;
+}
+.container a:focus,
+.container .link:focus,
+.container a:active,
+.container .link:active {
+	color: #0f5f87;
+}
+.container .btn:hover {
+	color: #0f5f87;
+	background-color: #FFF8DC;
+}
+.container .big-header{
+	background-color: #E3E3E3;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding: 10px 0px 0px 0px;
+}
+.container .big-header .header{
+	display: flex;
+	margin: 0px auto;
+}
+.container .big-header .header nav{
+	margin: 0px 5px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	right: 0px;
+	position: absolute;
+}
+.container .big-header .breadcrumb{
+	padding: 5px 0px 2px 0px;
+	margin-top: 2px;
+}
+.container .big-header .breadcrumb nav label{
+	color: #fff;
+	margin: 0px 10px 0px 0px;
+}
+.breadcrumb nav>label+label:before{
+	content: "/\00a0";
+	color: #2e92cf;
+	margin: 0px 5px 0px -15px;
+}
+.btn{
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.4;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+.container .big-header .header nav button {
+	margin-left: -5px;
+	border-left-color: #BDBDBD;
+	border-right-color: #BDBDBD;
+}
+.active{
+	background-color: #555555;
+	color: #ffffff;
+}
+.container label {
+	display: inline;
+	padding: 2px 5px 2px 5px;
+	font-size: .85em;
+	font-weight: 500;
+	line-height: 1;
+	color: #000;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .05em;
+}
+.container .wrap .big-header .split-line{
+	background-color: #000000;
+	width: 100%;
+	height: 0.5px;
+	position: fixed;
+	left: 0px;
+	margin: 2px 0px;
+}
+.container .site-footer{
+	position: fixed;
+	bottom: 0px;
+	border-top: 1px solid #000000;
+	background-color: #fff;
+	display: flex;
+}
+.container .site-footer p{
+	margin: 10px 0px 5px 0px;
+}
+.container .site-footer span{
+	background-color: #cccccc;
+	width: 1px;
+	margin: 10px 10px 0px 10px;
+}
+form .form-group{
+	margin: 10px 0px 15px 0px;
+}
+form .form-group label{
+	font-weight: 800;
+	font-size: 1em;
+	
+	width: 100%;
+}
+form .form-group .form-posi{
+	display: block;
+	margin: 10px 0px 10px 5px;
+	width: 45%;
+}
+.container .text-area{
+	height: 100px;
+}
+form .form-btn{
+	margin: 10px 0px 0px 0px;
+}
+form .checkbox{
+	margin: 10px 0px 10px 0px;
+}
+.container .article-list{
+	width: 90%;
+}
+.container .article-list .basic-info{
+	display: flex;
+	margin: -10px 0px 15px 0px;
+}
+.container .article-list .basic-info h4{
+	margin: 0px 20px 0px 0px;
+}
+.container .article-list article{
+	margin: 25px 0px;
+}
+.container .main-content{
+	margin: 0px 0px 50px 0px;
+}
+.container .help-block {
+	display: block;
+	margin:  5px 0px 10px 5px;
+	color: #737373;
+}
+.container .logo{
+	font-size: 2.2em;
+	font-weight: 600;
+	color: #000;
+	padding: 5px 0px 0px 0px;
+	margin: 5px 0px -10px 0px;
+}
+.container .resume-section{
+	margin: 0px 0px 40px 0px;
+	position: relative;
+}
+.container .resume-section .com-info{
+	display: flex;
+	margin: -10px 0px 15px 0px;
+	font-size: 12px;
+	position: relative;
+}
+.container .resume-section .com-info address{
+	margin: 0px 20px 0px 0px;
+	width: 80%;
+}
+.container .resume-section .com-info p{
+	right: 0px;
+	position: absolute;
+}
+.container .resume-section ul{
+	margin: 0px 0px 25px 0px;
+	width: 75%;
+}
+.container .resume-section .degree{
+	margin: -5px 0px 20px 0px;
+}
+.container .resume-section .degree p{
+	margin: -10px 0px 0px 0px;
+	font-size: 0.90em;
+}
+.container .resume-section .award{
+	width: 80%;
+}
+.container .resume-section h3{
+	border-bottom: 1px solid #c0c0c0;
+}
+.container .resume-section .collapse-icons{
+	right: 0px;
+	position: absolute;
+	padding: 10px 0px 0px 0px;
+}
+.container .panel .collapse-content{
+	display: block;
+	-webkit-animation: slideUp 2s ease-out 0.01s 1 normal;
+	-moz-animation: slideUp 2s ease-out 0.01s 1 normal;
+	-o-animation: slideUp 2s ease-out 0.01s 1 normal;
+}
+.container .panel .fa-angle-double-down{
+	display: none;
+	/*-webkit-transition: ;*/
+}
+.container .panel-collapse .collapse-content,
+.container .panel-collapse .fa-angle-double-up{
+	display: none;
+}
+.container .resume-section h3:hover,
+.container .resume-section span:hover{
+	color: #0f5f87;
+	cursor: pointer;
+	text-decoration: underline;
+}
