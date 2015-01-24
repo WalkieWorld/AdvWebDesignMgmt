@@ -327,6 +327,7 @@ form .checkbox{
 	-webkit-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
 	-moz-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
 	-o-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
+	animation: slideUp 1s ease-out 1.5s 1 normal forwards;
 }
 .container .panel .fa-angle-double-down,
 .container .panel-collapse .fa-angle-double-up{
@@ -334,7 +335,6 @@ form .checkbox{
 }
 .container .panel-collapse .collapse-content{
 	display: none;
-	-webkit-transition: height 10s ease-out 0.5s;
 }
 .container .resume-section h3:hover,
 .container .resume-section .collapse-icons:hover,
@@ -345,7 +345,13 @@ form .checkbox{
 }
 .container .panel{
 	-webkit-transition: height 1.5s ease-out 0.5s;
+	-moz-transition: height 1.5s ease-out 0.5s;
+	-o-transition: height 1.5s ease-out 0.5s;
+	transition: height 1.5s ease-out 0.5s;
 }
 .container .panel-collapse{
 	-webkit-transition: height 1.5s ease-out 0.5s;
+	-moz-transition: height 1.5s ease-out 0.5s;
+	-o-transition: height 1.5s ease-out 0.5s;
+	transition: height 1.5s ease-out 0.5s;
 }
