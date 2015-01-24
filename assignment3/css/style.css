@@ -323,22 +323,29 @@ form .checkbox{
 	padding: 10px 0px 0px 0px;
 }
 .container .panel .collapse-content{
-	display: block;
-	-webkit-animation: slideUp 2s ease-out 0.01s 1 normal;
-	-moz-animation: slideUp 2s ease-out 0.01s 1 normal;
-	-o-animation: slideUp 2s ease-out 0.01s 1 normal;
+	opacity: 0;
+	-webkit-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
+	-moz-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
+	-o-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
 }
-.container .panel .fa-angle-double-down{
-	display: none;
-	/*-webkit-transition: ;*/
-}
-.container .panel-collapse .collapse-content,
+.container .panel .fa-angle-double-down,
 .container .panel-collapse .fa-angle-double-up{
 	display: none;
 }
+.container .panel-collapse .collapse-content{
+	display: none;
+	-webkit-transition: height 10s ease-out 0.5s;
+}
 .container .resume-section h3:hover,
+.container .resume-section .collapse-icons:hover,
 .container .resume-section span:hover{
 	color: #0f5f87;
 	cursor: pointer;
 	text-decoration: underline;
+}
+.container .panel{
+	-webkit-transition: height 1.5s ease-out 0.5s;
+}
+.container .panel-collapse{
+	-webkit-transition: height 1.5s ease-out 0.5s;
 }

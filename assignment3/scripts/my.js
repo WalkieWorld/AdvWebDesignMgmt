@@ -147,8 +147,8 @@ blogBtn.addEventListener('click', function(){
  *	
 */
 
-var sectionColl = document.getElementsByClassName('resume-section')
-	;
+var sectionColl = document.getElementsByClassName('resume-section'),
+	heightArray = [];
 
 if(title === 'Resume'){
 
@@ -157,19 +157,55 @@ if(title === 'Resume'){
 		(function(n){
 
 			var h3 = sectionColl[n].querySelector('h3');
+			var height = sectionColl[n].offsetHeight;
+
+			h3.parentNode.style.height = height + 'px';
 
 			h3.addEventListener('click', function(){
 
 				var parentNode = h3.parentNode;
 
+				var sectionContent = parentNode.querySelector('section');
+				sectionContent.classList.add('collapse-content');
+
 				if(parentNode.classList.contains('panel')){
 
 					parentNode.classList.add('panel-collapse');
+					parentNode.style.height = '40px';
 					parentNode.classList.remove('panel');
 				}else{
 
 					parentNode.classList.remove('panel-collapse');
 					parentNode.classList.add('panel');
+					parentNode.style.height = height + 'px';
+				}
+			});
+		})(i);
+
+		(function(n){
+
+			var sp = sectionColl[n].querySelector('.collapse-icons');
+			var height = sectionColl[n].offsetHeight;
+
+			sp.parentNode.style.height = height + 'px';
+
+			sp.addEventListener('click', function(){
+
+				var parentNode = sp.parentNode;
+
+				var sectionContent = parentNode.querySelector('section');
+				sectionContent.classList.add('collapse-content');
+
+				if(parentNode.classList.contains('panel')){
+
+					parentNode.classList.add('panel-collapse');
+					parentNode.style.height = '40px';
+					parentNode.classList.remove('panel');
+				}else{
+
+					parentNode.classList.remove('panel-collapse');
+					parentNode.classList.add('panel');
+					parentNode.style.height = height + 'px';
 				}
 			});
 		})(i);
