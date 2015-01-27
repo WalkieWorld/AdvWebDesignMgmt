@@ -150,64 +150,40 @@ blogBtn.addEventListener('click', function(){
 var sectionColl = document.getElementsByClassName('resume-section'),
 	heightArray = [];
 
+var panelAnimation = function(index, selector){
+
+	var height = sectionColl[index].offsetHeight;
+
+	selector.parentNode.style.height = height + 'px';
+
+	selector.addEventListener('click', function(){
+
+		var parentNode = selector.parentNode;
+
+		var sectionContent = parentNode.querySelector('section');
+		sectionContent.classList.add('collapse-content');
+
+		if(parentNode.classList.contains('panel')){
+
+			parentNode.classList.add('panel-collapse');
+			parentNode.style.height = '40px';
+			parentNode.classList.remove('panel');
+		}else{
+
+			parentNode.classList.remove('panel-collapse');
+			parentNode.classList.add('panel');
+			parentNode.style.height = height + 'px';
+		}
+	});
+};
+
 if(title === 'Resume'){
 
-	for(var i = 0; i < sectionColl.length; i += 1){
-
-		(function(n){
-
-			var h3 = sectionColl[n].querySelector('h3');
-			var height = sectionColl[n].offsetHeight;
-
-			h3.parentNode.style.height = height + 'px';
-
-			h3.addEventListener('click', function(){
-
-				var parentNode = h3.parentNode;
-
-				var sectionContent = parentNode.querySelector('section');
-				sectionContent.classList.add('collapse-content');
-
-				if(parentNode.classList.contains('panel')){
-
-					parentNode.classList.add('panel-collapse');
-					parentNode.style.height = '40px';
-					parentNode.classList.remove('panel');
-				}else{
-
-					parentNode.classList.remove('panel-collapse');
-					parentNode.classList.add('panel');
-					parentNode.style.height = height + 'px';
-				}
-			});
-		})(i);
-
-		(function(n){
-
-			var sp = sectionColl[n].querySelector('.collapse-icons');
-			var height = sectionColl[n].offsetHeight;
-
-			sp.parentNode.style.height = height + 'px';
-
-			sp.addEventListener('click', function(){
-
-				var parentNode = sp.parentNode;
-
-				var sectionContent = parentNode.querySelector('section');
-				sectionContent.classList.add('collapse-content');
-
-				if(parentNode.classList.contains('panel')){
-
-					parentNode.classList.add('panel-collapse');
-					parentNode.style.height = '40px';
-					parentNode.classList.remove('panel');
-				}else{
-
-					parentNode.classList.remove('panel-collapse');
-					parentNode.classList.add('panel');
-					parentNode.style.height = height + 'px';
-				}
-			});
-		})(i);
-	}
+	for (var i = 0; i < sectionColl.length; i += 1) {
+		
+		var h3 = sectionColl[i].querySelector('h3');
+		var sp = sectionColl[i].querySelector('.collapse-icons');
+		panelAnimation(i, h3);
+		panelAnimation(i, sp);
+	};
 }

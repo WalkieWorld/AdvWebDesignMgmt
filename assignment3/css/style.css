@@ -324,10 +324,10 @@ form .checkbox{
 }
 .container .panel .collapse-content{
 	opacity: 0;
-	-webkit-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
-	-moz-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
-	-o-animation: slideUp 1s ease-out 1.5s 1 normal forwards;
-	animation: slideUp 1s ease-out 1.5s 1 normal forwards;
+	-webkit-animation: slideUp 1s ease-out 1s 1 normal forwards;
+	-moz-animation: slideUp 1s ease-out 1s 1 normal forwards;
+	-o-animation: slideUp 1s ease-out 1s 1 normal forwards;
+	animation: slideUp 1s ease-out 1s 1 normal forwards;
 }
 .container .panel .fa-angle-double-down,
 .container .panel-collapse .fa-angle-double-up{
@@ -344,14 +344,14 @@ form .checkbox{
 	text-decoration: underline;
 }
 .container .panel{
-	-webkit-transition: height 1.5s ease-out 0.5s;
-	-moz-transition: height 1.5s ease-out 0.5s;
-	-o-transition: height 1.5s ease-out 0.5s;
-	transition: height 1.5s ease-out 0.5s;
+	-webkit-transition: height 1s ease-out 0.5s;
+	-moz-transition: height 1s ease-out 0.5s;
+	-o-transition: height 1s ease-out 0.5s;
+	transition: height 1s ease-out 0.5s;
 }
 .container .panel-collapse{
-	-webkit-transition: height 1.5s ease-out 0.5s;
-	-moz-transition: height 1.5s ease-out 0.5s;
-	-o-transition: height 1.5s ease-out 0.5s;
-	transition: height 1.5s ease-out 0.5s;
+	-webkit-transition: height 1s ease-out 0.5s;
+	-moz-transition: height 1s ease-out 0.5s;
+	-o-transition: height 1s ease-out 0.5s;
+	transition: height 1s ease-out 0.5s;
 }
