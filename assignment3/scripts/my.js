@@ -5,6 +5,32 @@
 var homeBtn,
 	resBtn,
 	blogBtn,
+	newTag,
+	holdTag,
+	/* 
+	*	0: tag name; 
+	*	1: class name; 
+	*	2: tree level; 
+	*	3: text content; 
+	*	4: new attribute; 
+	*	5: new attribute content;
+	*/
+	headerTagArr = [
+		['header', 'wrap', 1],
+		['section', 'big-header container', 2],
+		['section', 'header', 3],
+		['section', 'logo', 4, "Hao's World"],
+		['nav', '', 4],
+		['button', 'btn', 5, 'Home', 'id', 'homeBtn'],
+		['button', 'btn', 5, 'Resume', 'id', 'resBtn'],
+		['button', 'btn', 5, 'Blog', 'id', 'blogBtn'],
+		['aside', 'split-line', 3],
+		['section', 'breadcrumb', 3],
+		['nav', 'container', 4],
+		['label', '', 5],
+		['a', '', 6, '', 'href', 'index.html'],
+		['label', 'active', 5, 'Resume']
+	],
 	header = document.querySelector('header'),
 	footer = document.querySelector('footer'),
 	secBigHeader = document.createElement('section'),
@@ -22,7 +48,6 @@ var homeBtn,
 	spanArray = [ document.createElement('span'), document.createElement('span') ],
 	title = document.getElementsByTagName('title')[0].textContent,
 	a = document.createElement('a');
-
 
 // add basic css class
 header.classList.add('wrap');
@@ -119,6 +144,12 @@ secBigHeader.appendChild(secBreadcrumb);
 secBreadcrumb.appendChild(navBreadcrumb);
 
 secLogo.textContent = "Hao's World";
+
+/*========================================================*/
+
+var dynamicFun = function(){
+	
+}
 
 /*
 	-------------- End --------------
