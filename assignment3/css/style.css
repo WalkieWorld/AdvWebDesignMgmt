@@ -27,7 +27,7 @@
 		opacity: 1;
 	}
 }
-keyframes slideUp{
+@keyframes slideUp{
 	from {
 		opacity: 0;
 	}
