@@ -10,146 +10,109 @@ var homeBtn,
 	/* 
 	*	0: tag name; 
 	*	1: class name; 
-	*	2: tree level; 
-	*	3: text content; 
-	*	4: new attribute; 
-	*	5: new attribute content;
+	*	2: parent id;
+	*	3: current id;
+	*	4: text content; 
+	*	5: new attribute; 
+	*	6: new attribute content;
 	*/
 	headerTagArr = [
-		['header', 'wrap', 1],
-		['section', 'big-header container', 2],
-		['section', 'header', 3],
-		['section', 'logo', 4, "Hao's World"],
-		['nav', '', 4],
-		['button', 'btn', 5, 'Home', 'id', 'homeBtn'],
-		['button', 'btn', 5, 'Resume', 'id', 'resBtn'],
-		['button', 'btn', 5, 'Blog', 'id', 'blogBtn'],
-		['aside', 'split-line', 3],
-		['section', 'breadcrumb', 3],
-		['nav', 'container', 4],
-		['label', '', 5],
-		['a', '', 6, '', 'href', 'index.html'],
-		['label', 'active', 5, 'Resume']
+		['header', ['wrap'], 0, 1],
+		['section', ['big-header','container'], 1, 2, '', 'id', 'big-header'],
+		['section', ['header'], 2, 3, '', 'id', 'header'],
+		['section', ['logo'], 3, 4, "Hao's World", 'id', 'logo'],
+		['nav', [''], 3, 5, '', 'id', 'nav-btn'],
+		['button', ['btn'], 5, 6, 'Home', 'id', 'homeBtn'],
+		['button', ['btn'], 5, 7, 'Resume', 'id', 'resBtn'],
+		['button', ['btn'], 5, 8, 'Blog', 'id', 'blogBtn'],
+		['aside', ['split-line'], 2, 9, '', 'id', 'split-line'],
+		['section', ['breadcrumb'], 2, 10, '', 'id', 'breadcrumb'],
+		['nav', ['container'], 10, 11, '', 'id', 'nav-bread'],
+		['label', [''], 11, 12, '', 'id', 'label-bread'],
+		['a', [''], 12, 13, 'Home', 'href', 'index.html'],
+		['label', ['active'], 11, 14, '', 'id', 'label-active'],
+		['footer', ['site-footer', 'container'], 0, 15],
+		['p', [''], 15, 16, 'Author: Hao Zhang', 'id', 'p1'],
+		['span', [''], 15, 17, '', 'id', 'sp1'],
+		['p', [''], 15, 18, 'Course: ICT-4510', 'id', 'p2'],
+		['span', [''], 15, 19, '', 'id', 'sp2'],
+		['p', [''], 15, 20, 'Assginment 3', 'id', 'p3'],
 	],
-	header = document.querySelector('header'),
-	footer = document.querySelector('footer'),
-	secBigHeader = document.createElement('section'),
-	secHeader = document.createElement('section'),
-	secLogo = document.createElement('section'),
-	secBreadcrumb = document.createElement('section'),
-	navHeader = document.createElement('nav'),
-	navBreadcrumb = document.createElement('nav'),
-	asideSplit = document.createElement('aside'),
-	labelArray = [ document.createElement('label'), document.createElement('label') ],
-	// btn[0]: btnHome, btn[1]: btnResume, btn[2]: btnBlog
-	btnArray = [ document.createElement('button') , document.createElement('button') , document.createElement('button') ],
-	// For footer: p[0]: Author, p[1]: Course, p[2]: Assignment 2
-	pArray = [ document.createElement('p'), document.createElement('p'), document.createElement('p') ],
-	spanArray = [ document.createElement('span'), document.createElement('span') ],
-	title = document.getElementsByTagName('title')[0].textContent,
-	a = document.createElement('a');
-
-// add basic css class
-header.classList.add('wrap');
-footer.classList.add('site-footer'); 
-footer.classList.add('container');
-secBigHeader.classList.add('big-header');
-secBigHeader.classList.add('container');
-secHeader.classList.add('header');
-secLogo.classList.add('logo');
-asideSplit.classList.add('split-line');
-secBreadcrumb.classList.add('breadcrumb');
-navBreadcrumb.classList.add('container');
-
-btnArray.forEach(function(val, index, btnArray){
-	
-	btnArray[index].classList.add('btn');
-
-	if(index === 0){
-
-		if(title === 'Index'){
-		
-			btnArray[index].classList.add('active');
-			labelArray[index].classList.add('active');
-			labelArray[index].textContent = 'Home';
-		}
-
-		navBreadcrumb.appendChild(labelArray[index]);
-		btnArray[index].setAttribute('id', 'homeBtn');
-		btnArray[index].textContent = 'Home';
-		homeBtn = btnArray[index];
-	}else if(index === 1){
-
-		if(title === 'Resume'){
-
-			btnArray[index].classList.add('active');
-			labelArray[index].textContent = 'Resume';
-			labelArray[index].classList.add('active');
-			a.setAttribute('href', 'index.html');
-			a.textContent = "Home"
-			labelArray[index - 1].appendChild(a);
-			navBreadcrumb.appendChild(labelArray[index]);
-		}
-
-		btnArray[index].setAttribute('id', 'resBtn');
-		btnArray[index].textContent = 'Resume';
-		resBtn = btnArray[index];
-	}else{
-
-		if(title === 'Blog'){
-
-			btnArray[index].classList.add('active');
-			labelArray[index - 1].textContent = 'Blog';
-			labelArray[index - 1].classList.add('active');
-			a.setAttribute('href', 'index.html');
-			a.textContent = 'Home';
-			labelArray[index - 2].appendChild(a);
-			navBreadcrumb.appendChild(labelArray[index - 1]);
-		}
-
-		btnArray[index].setAttribute('id', 'blogBtn');
-		btnArray[index].textContent = 'Blog';
-		blogBtn = btnArray[index];
-	}
-
-	navHeader.appendChild(btnArray[index]);
-});
-
-pArray.forEach(function(val, index, pArray){
-
-	if(index === 0){
-
-		pArray[index].textContent = 'Author: Hao Zhang';
-	}else if(index === 1){
-
-		pArray[index].textContent = 'Course: ICT-4510';
-	}else{
-
-		pArray[index].textContent = 'Assginment 3';
-	}
-
-	footer.appendChild(pArray[index]);
-
-	if(index < pArray.length - 1){
-		footer.appendChild(spanArray[index]);
-	}
-});
-
-header.appendChild(secBigHeader);
-secBigHeader.appendChild(secHeader);
-secHeader.appendChild(secLogo);
-secHeader.appendChild(navHeader);
-secBigHeader.appendChild(asideSplit);
-secBigHeader.appendChild(secBreadcrumb);
-secBreadcrumb.appendChild(navBreadcrumb);
-
-secLogo.textContent = "Hao's World";
-
-/*========================================================*/
+	title;
 
 var dynamicFun = function(){
 	
+	headerTagArr.forEach(function (curVal, index, headerTagArr){
+
+		curVal[0] !== "header" && curVal[0] !== "footer"
+			? newTag = document.createElement(curVal[0]) 
+			: newTag = document.querySelector(curVal[0]);
+		
+		// set attributes
+		var attrArr = curVal[1];
+		attrArr.forEach(function (cVal, index, attrArr){
+			
+			if(cVal !== ''){
+
+				newTag.classList.add(cVal);
+			}
+		});
+
+		// get parent tag
+		if(curVal[2] !== 0 ){
+
+			var id;
+
+			headerTagArr[curVal[2] - 1][5] !== 'id' 
+				? id = headerTagArr[curVal[2] - 1][0] 
+				: id = '#' + headerTagArr[curVal[2] - 1][6];
+
+			holdTag = document.querySelector( id );
+		}
+		
+		switch(curVal.length){
+			case 7:
+				var curContent;
+
+				if(curVal[6] === 'label-active'){
+					
+					curContent = document.querySelector('title').textContent;
+				}else{
+
+					curContent = curVal[4];
+				}
+				newTag.textContent = curContent;
+				newTag.setAttribute(curVal[5], curVal[6]);
+				break;
+			default:
+				break;
+		}
+
+		if( holdTag !== undefined && newTag.textContent !== 'Index'){
+
+			holdTag.appendChild(newTag);
+			holdTag = undefined;
+		}
+
+		if(curVal[0] === 'button'){
+			switch(curVal[6]){
+				case 'homeBtn':
+					homeBtn = newTag;
+					break;
+				case 'resBtn':
+					resBtn = newTag;
+					break;
+				case 'blogBtn':
+					blogBtn = newTag;
+					break;
+				default:
+				break;
+			}
+		}
+	});
 }
+
+dynamicFun();
 
 /*
 	-------------- End --------------
@@ -207,6 +170,8 @@ var panelAnimation = function(index, selector){
 		}
 	});
 };
+
+title = document.querySelector('title').textContent;
 
 if(title === 'Resume'){
 

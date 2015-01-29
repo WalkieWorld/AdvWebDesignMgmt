@@ -187,10 +187,9 @@ body.container{
 	cursor: pointer;
 	border: 1px solid transparent;
 }
-.container .big-header .header nav button {
-	margin-left: -5px;
-	border-left-color: #BDBDBD;
-	border-right-color: #BDBDBD;
+.container .big-header .header nav button:nth-child(2n+1) {
+	border-left: 1px solid #BDBDBD;
+	border-right: 1px solid #BDBDBD;
 }
 .active{
 	background-color: #555555;
